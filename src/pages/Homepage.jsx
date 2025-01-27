@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import Navbar from "../components/navbar/Navbar";
 
 function Homepage() {
-    
-    return <>
-    <Link to="/shop">shop</Link>
+  return (
+    <>
+      <Navbar currentPage={"home"}></Navbar>
     </>
+  );
 }
 
 export default Homepage;

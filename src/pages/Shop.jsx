@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import Navbar from "../components/navbar/Navbar";
 
 function Shop() {
-    return <><Link to="/">homepage</Link></>;
+  return (
+    <>
+      <Navbar currentPage={"shop"}></Navbar>
+    </>
+  );
 }
 
 export default Shop;

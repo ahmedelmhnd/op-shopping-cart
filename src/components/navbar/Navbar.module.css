@@ -1,0 +1,21 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: white;
+    color: black;
+}
+
+.link {
+    color: black;
+}
+
+.link.active {
+    text-decoration: underline;
+}
+
+nav{
+    display: flex;
+    gap: 20px;
+}
