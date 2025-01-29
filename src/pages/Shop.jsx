@@ -3,12 +3,14 @@ import { useOutletContext } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 
 function Shop() {
-    const {counter}  = useOutletContext();
+    const { itemsArray, loading, error } = useOutletContext();
+    console.log(itemsArray);
 
   return (
     <>
       <Navbar currentPage={"shop"}></Navbar>
-      {counter}
+      {loading ? <>loading...</> : <></>}
+      {error ? <>{error}</> : <></>}
     </>
   );
 }
