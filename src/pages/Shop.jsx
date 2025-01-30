@@ -9,8 +9,8 @@ function Shop() {
   return (
     <>
       <Navbar currentPage={"shop"}></Navbar>
-      {loading ? <>loading...</> : <></>}
-      {error ? <>{error}</> : <></>}
+      {loading && (<div>Loading ...</div>)}
+      {error && (<div >{error}</div>)}
     </>
   );
 }

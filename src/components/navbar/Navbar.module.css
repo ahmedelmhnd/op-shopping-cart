@@ -3,7 +3,8 @@
     justify-content: space-around;
     align-items: center;
 
-    background-color: white;
+    background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 10%, rgba(230,230,230,1) 100%);
     color: black;
 }
 

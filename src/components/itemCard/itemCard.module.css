@@ -1,0 +1,37 @@
+.card {
+  box-sizing: border-box;
+  display: grid;
+  width: 200px;
+  align-items: center;
+  justify-items: center;
+  border-radius: 12px;
+
+  background-color: white;
+  color: black;
+  transition: transform 0.5s ease-out 0.25s;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.title {
+    padding: 5px;
+    text-align: center;
+
+
+  margin: 0;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.price {
+    
+  margin: 0;
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
