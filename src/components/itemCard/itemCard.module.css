@@ -8,7 +8,7 @@
 
   background-color: white;
   color: black;
-  transition: transform 0.5s ease-out 0.25s;
+  transition: transform 0.25s ease-out 0s;
 }
 
 .image {
@@ -28,7 +28,6 @@
 }
 
 .price {
-    
   margin: 0;
 }
 
