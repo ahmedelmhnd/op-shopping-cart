@@ -1,6 +1,7 @@
 import styles from "./app.module.css";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
+import { showCartLogic, updateCartLogic } from "../cart/cartLogic";
 
 function App() {
   const [itemsArray, setItemsArray] = useState(null);
@@ -10,8 +11,13 @@ function App() {
   const [cart, setCart] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
 
+
+  function updateCart(id, number) {
+    updateCartLogic(id, number, setCart, cart)
+  }
+
   function showCart(status) {
-    setCartOpen(status);
+    showCartLogic(status, setCartOpen)
   }
 
   useEffect(() => {
@@ -35,29 +41,7 @@ function App() {
     fetchItems();
   }, []);
 
-  function updateCart(id, number) {
-    const newCart = [];
-    let exists = false;
 
-    cart.forEach((e) => {
-      if (e.id == id) {
-        exists = true;
-      }
-      newCart.push({ id: e.id, number: e.number });
-    });
-
-    if (exists) {
-      cart.forEach((e, index) => {
-        if (e.id == id) {
-          newCart[index] = { id: id, number: number };
-        }
-      });
-    } else {
-      newCart.push({ id: id, number: number });
-    }
-
-    setCart(newCart);
-  }
 
   return (
     <div className={styles.main}>
