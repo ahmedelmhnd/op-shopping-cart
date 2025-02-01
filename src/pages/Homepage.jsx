@@ -12,7 +12,7 @@ function Homepage() {
 
   return (
     <>
-      {cartOpen && <Cart cart={cart} updateCart={updateCart} showCart={showCart} cartOpen={cartOpen}></Cart>}
+      {cartOpen && <Cart cart={cart} updateCart={updateCart} showCart={showCart} cartOpen={cartOpen} itemList={itemsArray}></Cart>}
       <Navbar currentPage={"home"} showCart={showCart}></Navbar>
       <HomeAdvert></HomeAdvert>
       <HomeItems items={itemsArray} loading={loading} error={error}></HomeItems>
