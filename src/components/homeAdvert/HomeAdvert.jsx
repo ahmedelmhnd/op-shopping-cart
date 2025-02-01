@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./homeAdvert.module.css";
 
 function HomeAdvert() {
@@ -9,9 +10,12 @@ function HomeAdvert() {
         Why browse the ordinary when you can experience the extraordinary? At
         [Your Store Name], we bring you handpicked products, unbeatable prices,
         and a seamless shopping experience designed to elevate your lifestyle.
-        The best finds don’t wait—why should you?
+        The best finds don&apos;t wait—why should you?
       </p>
+      <Link to="shop">
       <button className={styles.button}>Shop Now</button>
+      </Link>
+      
     </div>
     </div>
   );

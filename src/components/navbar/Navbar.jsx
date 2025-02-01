@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import cartIcon from "../../assets/shopping-cart.png"
 
-function Navbar({ currentPage }) {
+function Navbar({ currentPage, showCart}) {
   return (
     <div className={styles.nav}>
       <h1>Shopppyy</h1>
@@ -25,6 +26,8 @@ function Navbar({ currentPage }) {
             Shop
           </Link>
         )}
+
+        <img className={styles.cart} src={cartIcon} onClick={showCart} alt="" />
       </nav>
     </div>
   );
