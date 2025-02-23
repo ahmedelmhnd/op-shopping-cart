@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 import { showCartLogic, updateCartLogic } from "../cart/cartLogic";
 
 function App() {
-  const [itemsArray, setItemsArray] = useState(null);
+  const [itemsArray, setItemsArray] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -32,7 +32,7 @@ function App() {
         setItemsArray(json);
       } catch (err) {
         setError(err.message);
-        setItemsArray(null);
+        setItemsArray([]);
       } finally {
         setLoading(false);
       }

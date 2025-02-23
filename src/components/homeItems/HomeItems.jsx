@@ -10,10 +10,10 @@ function HomeItems({ items, loading, error }) {
       {error && <div className={styles.error}>{error}</div>}
       {items && (
         <div className={styles.container}>
-          <ItemCard item={items[0]}></ItemCard>
-          <ItemCard item={items[1]}></ItemCard>
-          <ItemCard item={items[2]}></ItemCard>
-          <ItemCard item={items[3]}></ItemCard>
+          {items[0] && <ItemCard item={items[0]}></ItemCard>}
+          {items[1] && <ItemCard item={items[1]}></ItemCard>}
+          {items[2] && <ItemCard item={items[2]}></ItemCard>}
+          {items[3] && <ItemCard item={items[3]}></ItemCard>}
         </div>
       )}
     </>

@@ -12,7 +12,7 @@ function CartItem({ itemProps, itemList }) {
 
   return (
     <div>
-      <img src={item.image} alt="" />
+      {item && <img src={item.image} alt="" />}
     </div>
   );
 }

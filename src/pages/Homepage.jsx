@@ -7,12 +7,20 @@ import Footer from "../components/footer/Footer";
 import Cart from "../components/cart/Cart";
 
 function Homepage() {
-  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart} = useOutletContext();
-
+  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart } =
+    useOutletContext();
 
   return (
     <>
-      {cartOpen && <Cart cart={cart} updateCart={updateCart} showCart={showCart} cartOpen={cartOpen} itemList={itemsArray}></Cart>}
+      {cartOpen && (
+        <Cart
+          cart={cart}
+          updateCart={updateCart}
+          showCart={showCart}
+          cartOpen={cartOpen}
+          itemList={itemsArray}
+        ></Cart>
+      )}
       <Navbar currentPage={"home"} showCart={showCart}></Navbar>
       <HomeAdvert></HomeAdvert>
       <HomeItems items={itemsArray} loading={loading} error={error}></HomeItems>
