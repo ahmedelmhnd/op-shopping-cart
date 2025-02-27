@@ -1,14 +1,28 @@
 .container {
-  background-color: #ffffff;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  margin-left: auto;
   width: 400px;
-  top: 50%;
   position: fixed;
-  transform: translateY(-200px);
+  right: 0;
   overflow-y: auto;
-  height: 400px;
-  color: black;
-    border: none;
-  border-radius: 20px;
+  height: 100%;
+  color: rgb(255, 255, 255);
+
+  text-align: center;
 }
 
+.closeIcon{
+  width: 20px;
+}
 
+.closeButton{
+  background-color: transparent;
+  margin-right: 100%;
+}
+
+.closeContainer{
+  display: flex;
+  justify-content: left;
+}

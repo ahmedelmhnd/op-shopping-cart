@@ -47,13 +47,14 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+
+  transition: transform 0.25s ease-out 0s;
 }
 button:hover {
-  border-color: #646cff;
+  transform: scale(1.2);
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
 @media (prefers-color-scheme: light) {
