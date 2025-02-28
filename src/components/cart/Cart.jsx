@@ -13,6 +13,9 @@ function Cart({ cart, updateCart, showCart, cartOpen, itemList }) {
       <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
       <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
       <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
+      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
+      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
+      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
 
     </dialog>
   );

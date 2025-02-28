@@ -19,7 +19,7 @@ function Shop() {
           itemList={itemsArray}
         ></Cart>
       )}
-      <Navbar currentPage={"shop"}></Navbar>
+      <Navbar currentPage={"shop"} showCart={showCart}></Navbar>
       {loading && <div className={styles.loading}>Loading ...</div>}
       {error && <div className={styles.error}>{error}</div>}
       <Footer></Footer>
