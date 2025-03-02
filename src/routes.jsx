@@ -1,6 +1,9 @@
 import Homepage from "./pages/Homepage";
 import Shop from "./pages/Shop";
 import App from "./components/app/App";
+import ItemPage from "./pages/itemPage/ItemPage"
+
+
 
 const routes = [
   {
@@ -15,6 +18,10 @@ const routes = [
         path: "shop",
         element: <Shop />,
       },
+      {
+        path: "item/:ID",
+        element: <ItemPage />
+      }
     ],
   },
 ];
