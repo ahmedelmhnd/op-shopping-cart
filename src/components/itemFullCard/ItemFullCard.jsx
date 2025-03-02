@@ -2,6 +2,7 @@ import styles from "./itemFullCard.module.css";
 import minus from "../../assets/minus.png";
 import plus from "../../assets/plus.png";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 function ItemFullCard({ item, intialQuantity, updateCart, loading, error, showCart }) {
 
@@ -52,6 +53,15 @@ function ItemFullCard({ item, intialQuantity, updateCart, loading, error, showCa
       )}
     </>
   );
+}
+
+ItemFullCard.propTypes = {
+    item: PropTypes.object,
+    intialQuantity: PropTypes.number,
+    updateCart: PropTypes.func,
+    loading: PropTypes.bool,
+    error: PropTypes.string,
+    showCart: PropTypes.func
 }
 
 export default ItemFullCard;

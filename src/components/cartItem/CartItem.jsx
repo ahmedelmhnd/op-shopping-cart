@@ -2,10 +2,9 @@ import styles from "./cartItem.module.css";
 import plus from "../../assets/plus.png";
 import minus from "../../assets/minus.png";
 import { findItem } from "../cart/cartLogic";
+import PropTypes from "prop-types";
 
 function CartItem({ itemProps, itemList, updateCart }) {
-
-
   const item = findItem(itemList, itemProps.id);
 
   function plusHandler() {
@@ -43,5 +42,11 @@ function CartItem({ itemProps, itemList, updateCart }) {
     </>
   );
 }
+
+CartItem.propTypes = {
+  itemProps: PropTypes.object,
+  itemList: PropTypes.array,
+  updateCart: PropTypes.func,
+};
 
 export default CartItem;

@@ -2,8 +2,9 @@ import CartItem from "../cartItem/CartItem";
 import styles from "./cart.module.css";
 import closeIcon from "../../assets/close.png";
 import { findTotal } from "./cartLogic";
+import PropTypes from "prop-types";
 
-function Cart({ cart, updateCart, showCart, cartOpen, itemList, emptyCart }) {
+function Cart({ cart, updateCart, showCart, /*cartOpen,*/ itemList, emptyCart }) {
   
 
  
@@ -44,6 +45,15 @@ function Cart({ cart, updateCart, showCart, cartOpen, itemList, emptyCart }) {
       <button onClick={checkOutHandler}>Check out</button>
     </dialog>
   );
+}
+
+Cart.propTypes = {
+  cart: PropTypes.array,
+  updateCart: PropTypes.func,
+  showCart: PropTypes.func,
+  cartOpen: PropTypes.bool,
+  itemList: PropTypes.array,
+  emptyCart: PropTypes.func
 }
 
 export default Cart;
