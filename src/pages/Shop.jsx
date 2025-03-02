@@ -3,11 +3,18 @@ import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import Cart from "../components/cart/Cart";
 import ShopItems from "../components/shopItems/ShopItems";
-import styles from "./shop.module.css"
 
 function Shop() {
-  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart, emptyCart } =
-    useOutletContext();
+  const {
+    itemsArray,
+    loading,
+    error,
+    cart,
+    updateCart,
+    cartOpen,
+    showCart,
+    emptyCart,
+  } = useOutletContext();
 
   return (
     <>
