@@ -10,12 +10,12 @@ function Cart({ cart, updateCart, showCart, cartOpen, itemList }) {
   return (
     <dialog open="open" className={styles.container}>
       <div className={styles.closeContainer}><button className={styles.closeButton} onClick={hideCart}><img className={styles.closeIcon} src={closeIcon} alt="" /></button></div>
+      <CartItem itemProps={{id: 14, number: 2}} itemList={itemList}></CartItem>
+      <CartItem itemProps={{id: 8, number: 2}} itemList={itemList}></CartItem>
+      <CartItem itemProps={{id: 18, number: 2}} itemList={itemList}></CartItem>
+      <CartItem itemProps={{id: 3, number: 2}} itemList={itemList}></CartItem>
       <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
-      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
-      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
-      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
-      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
-      <CartItem itemProps={{id: 4, number: 2}} itemList={itemList}></CartItem>
+
 
     </dialog>
   );

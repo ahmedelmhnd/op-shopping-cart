@@ -1,12 +1,15 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
-import cartIcon from "../../assets/shopping-cart.png"
+import cartIcon from "../../assets/shopping-cart.png";
 
-function Navbar({ currentPage, showCart}) {
+function Navbar({ currentPage, showCart }) {
   return (
     <div className={styles.nav}>
-      <h1>Shopppyy</h1>
+      <Link to="/">
+        <h1>Shopppyy</h1>
+      </Link>
+
       <nav>
         {currentPage == "home" ? (
           <Link className={styles.active + " " + styles.link} to="/">

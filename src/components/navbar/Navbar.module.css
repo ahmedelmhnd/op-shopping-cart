@@ -17,6 +17,10 @@
   color: black;
 }
 
+.link:hover{
+  color: #474747;
+}
+
 .link.active {
   text-decoration: underline;
 }

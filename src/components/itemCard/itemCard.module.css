@@ -9,6 +9,7 @@
   background-color: white;
   color: black;
   transition: transform 0.25s ease-out 0s;
+  padding: 10px;
 }
 
 .image {
@@ -18,9 +19,8 @@
 }
 
 .title {
-    padding: 5px;
-    text-align: center;
-
+  padding: 5px;
+  text-align: center;
 
   margin: 0;
   font-size: 13px;

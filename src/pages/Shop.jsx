@@ -2,6 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 import Cart from "../components/cart/Cart";
+import ShopItems from "../components/shopItems/ShopItems";
 import styles from "./shop.module.css"
 
 function Shop() {
@@ -20,8 +21,7 @@ function Shop() {
         ></Cart>
       )}
       <Navbar currentPage={"shop"} showCart={showCart}></Navbar>
-      {loading && <div className={styles.loading}>Loading ...</div>}
-      {error && <div className={styles.error}>{error}</div>}
+      <ShopItems items={itemsArray} loading={loading} error={error}></ShopItems>
       <Footer></Footer>
     </>
   );
