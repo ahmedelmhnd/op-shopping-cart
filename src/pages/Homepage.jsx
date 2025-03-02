@@ -7,7 +7,7 @@ import Footer from "../components/footer/Footer";
 import Cart from "../components/cart/Cart";
 
 function Homepage() {
-  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart } =
+  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart, emptyCart } =
     useOutletContext();
 
   return (
@@ -19,6 +19,7 @@ function Homepage() {
           showCart={showCart}
           cartOpen={cartOpen}
           itemList={itemsArray}
+          emptyCart={emptyCart}
         ></Cart>
       )}
       <Navbar currentPage={"home"} showCart={showCart}></Navbar>

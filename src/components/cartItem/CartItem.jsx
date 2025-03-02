@@ -1,17 +1,12 @@
 import styles from "./cartItem.module.css";
 import plus from "../../assets/plus.png";
 import minus from "../../assets/minus.png";
+import { findItem } from "../cart/cartLogic";
 
-function CartItem({ itemProps, itemList, updateCart}) {
-  function findItem() {
-    for (let index = 0; index < itemList.length; index++) {
-      if (itemList[index].id == itemProps.id) {
-        return itemList[index];
-      }
-    }
-  }
+function CartItem({ itemProps, itemList, updateCart }) {
 
-  const item = findItem();
+
+  const item = findItem(itemList, itemProps.id);
 
   function plusHandler() {
     updateCart(item.id, itemProps.number + 1);
@@ -31,7 +26,7 @@ function CartItem({ itemProps, itemList, updateCart}) {
           <p className={styles.description}>{item.title}</p>
           <div>
             <p className={styles.cost}>
-              {"$ " + item.price * itemProps.number}
+              {"$ " + Math.round(itemProps.number * item.price * 100) / 100}
             </p>
             <div className={styles.quantity}>
               <button className={styles.minusButton} onClick={minusHandler}>

@@ -6,7 +6,7 @@ import ShopItems from "../components/shopItems/ShopItems";
 import styles from "./shop.module.css"
 
 function Shop() {
-  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart } =
+  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart, emptyCart } =
     useOutletContext();
 
   return (
@@ -18,6 +18,7 @@ function Shop() {
           showCart={showCart}
           cartOpen={cartOpen}
           itemList={itemsArray}
+          emptyCart={emptyCart}
         ></Cart>
       )}
       <Navbar currentPage={"shop"} showCart={showCart}></Navbar>

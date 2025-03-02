@@ -20,6 +20,10 @@ function App() {
     showCartLogic(status, setCartOpen)
   }
 
+  function emptyCart() {
+    setCart([]);
+  }
+
   useEffect(() => {
     async function fetchItems() {
       try {
@@ -45,7 +49,7 @@ function App() {
 
   return (
     <div className={styles.main}>
-      <Outlet context={{ itemsArray, loading, error, cart, updateCart, cartOpen, showCart}}></Outlet>
+      <Outlet context={{ itemsArray, loading, error, cart, updateCart, cartOpen, showCart, emptyCart}}></Outlet>
     </div>
   );
 }

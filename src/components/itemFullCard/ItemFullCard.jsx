@@ -1,15 +1,24 @@
 import styles from "./itemFullCard.module.css";
 import minus from "../../assets/minus.png";
 import plus from "../../assets/plus.png";
+import { useState } from "react";
 
-function ItemFullCard({ item, quantity, updateCart, loading, error }) {
+function ItemFullCard({ item, intialQuantity, updateCart, loading, error, showCart }) {
+
+    const [quantity, setQuantity] = useState(intialQuantity);
+
+    function addToCartHandler() {
+        updateCart(item.id, quantity);
+        showCart(true);
+    }
+
   function plusHandler() {
-    updateCart(item.id, quantity + 1);
+    setQuantity(quantity + 1)
   }
 
   function minusHandler() {
     if (!(quantity == 0)) {
-      updateCart(item.id, quantity - 1);
+        setQuantity(quantity - 1)
     }
   }
 
@@ -35,9 +44,9 @@ function ItemFullCard({ item, quantity, updateCart, loading, error }) {
               <button className={styles.plusButton} onClick={plusHandler}>
                 <img className={styles.plusIcon} src={plus} alt="" />
               </button>
-            </div>
-
-            <button className={styles.button}>add to cart</button>
+            </div>  
+            <p className={styles.total}>{"Total: $" + quantity * Math.round(item.price * 100) / 100}</p>
+            <button className={styles.button} onClick={addToCartHandler}>add to cart</button>
           </div>
         </div>
       )}

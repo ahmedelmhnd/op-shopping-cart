@@ -1,4 +1,3 @@
-
 function updateCartLogic(id, number, setCart, cart) {
   const newCart = [];
   let exists = false;
@@ -27,4 +26,25 @@ function showCartLogic(status, setCartOpen) {
   setCartOpen(status);
 }
 
-export { updateCartLogic, showCartLogic };
+function findItem(itemList, id) {
+  for (let index = 0; index < itemList.length; index++) {
+    if (itemList[index].id == id) {
+      return itemList[index];
+    }
+  }
+}
+
+function findTotal(cart, itemList) {
+  let total = 0;
+
+  cart.forEach((e) => {
+    const item = findItem(itemList, e.id);
+
+    total = total + e.number * item.price;
+  });
+
+  return total;
+}
+
+
+export { updateCartLogic, showCartLogic, findItem, findTotal };

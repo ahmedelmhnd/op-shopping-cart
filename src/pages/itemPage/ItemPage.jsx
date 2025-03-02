@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import ItemFullCard from "../../components/itemFullCard/ItemFullCard";
 
 function ItemPage() {
-  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart } =
+  const { itemsArray, loading, error, cart, updateCart, cartOpen, showCart, emptyCart } =
     useOutletContext();
 
   const { ID } = useParams();
@@ -23,7 +23,7 @@ function ItemPage() {
   }
   const item = findItem(ID);
 
-  let quantity = 0;
+  let quantity = 1;
 
   cart.forEach((e) => {
     if (e.id == ID) {
@@ -40,15 +40,17 @@ function ItemPage() {
           showCart={showCart}
           cartOpen={cartOpen}
           itemList={itemsArray}
+          emptyCart={emptyCart}
         ></Cart>
       )}
       <Navbar currentPage="item" showCart={showCart}></Navbar>
       <ItemFullCard
         item={item}
-        quantity={quantity}
+        intialQuantity={quantity}
         updateCart={updateCart}
         loading={loading}
         error={error}
+        showCart={showCart}
       ></ItemFullCard>
       <Footer></Footer>
     </>

@@ -5,6 +5,7 @@ import ItemPage from "./pages/itemPage/ItemPage"
 
 
 
+
 const routes = [
   {
     path: "/",
@@ -21,7 +22,7 @@ const routes = [
       {
         path: "item/:ID",
         element: <ItemPage />
-      }
+      },
     ],
   },
 ];
